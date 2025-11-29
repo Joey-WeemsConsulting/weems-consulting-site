@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weems Consulting LLC | IT Consulting</title>
+    <title>Weems Consulting LLC | IT Strategy & Security</title>
     <style>
         :root {
             --color-black: #1a1a1a;
@@ -14,12 +14,13 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--color-black);
             color: var(--color-white);
             line-height: 1.6;
+            scroll-behavior: smooth;
         }
 
         .container {
@@ -32,7 +33,8 @@
             background-color: var(--color-gray);
             padding: 20px 0;
             text-align: center;
-            border-bottom: 2px solid var(--color-green);
+            border-bottom: 3px solid var(--color-green);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .logo-container {
@@ -42,63 +44,142 @@
             margin-bottom: 10px;
         }
 
-        .logo {
-            /* Placeholder for your logo image */
-            width: 150px;
-            height: 50px;
-            /* You should replace this background with your actual logo image */
-            background-image: url("<<PASTE_LOGO_IMAGE_URL_HERE>>"); 
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center left;
+        .logo-img {
+            width: 250px;
+            height: auto;
+            border-radius: 4px;
         }
 
         h1 {
             color: var(--color-green);
             margin: 0;
-            font-size: 2.5em;
+            font-size: 2.8em;
+            letter-spacing: 1px;
         }
 
         h2 {
+            color: var(--color-green);
+            border-bottom: 2px solid var(--color-gray);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+
+        h3 {
+            color: var(--color-white);
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 1.3em;
+        }
+
+        /* --- Professional Summary --- */
+        #summary p {
+            background-color: #222;
+            padding: 20px;
+            border-left: 5px solid var(--color-green);
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            font-size: 1.1em;
             color: var(--color-silver);
-            border-bottom: 1px solid var(--color-gray);
-            padding-bottom: 5px;
-            margin-top: 30px;
         }
 
         /* --- Experience Section --- */
         .experience-item {
-            background-color: var(--color-gray);
-            padding: 15px;
-            margin-bottom: 20px;
-            border-left: 4px solid var(--color-green);
-            border-radius: 4px;
+            background-color: #222;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 6px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+            transition: transform 0.2s;
         }
 
-        .experience-item h3 {
-            color: var(--color-white);
-            margin-top: 0;
-            margin-bottom: 5px;
+        .experience-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.6);
         }
 
         .experience-item .details {
             font-style: italic;
             color: var(--color-silver);
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            font-size: 0.9em;
         }
 
-        ul {
-            list-style: disc;
-            margin-left: 20px;
+        .experience-item ul {
+            list-style: none; /* Remove default bullet points */
             padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .experience-item ul li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            color: var(--color-silver);
+        }
+
+        .experience-item ul li::before {
+            content: "•"; /* Custom bullet point */
+            color: var(--color-green);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .highlight {
+            color: var(--color-white);
+            font-weight: 600;
+        }
+
+        /* --- Skills Table --- */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .skill-category {
+            background-color: #222;
+            padding: 20px;
+            border-radius: 6px;
+            border-top: 3px solid var(--color-green);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-category h4 {
+            color: var(--color-green);
+            margin-top: 0;
+            border-bottom: 1px dashed var(--color-gray);
+            padding-bottom: 5px;
+            font-size: 1.2em;
+        }
+
+        .skill-category span {
+            display: inline-block;
+            background-color: var(--color-gray);
+            color: var(--color-silver);
+            padding: 5px 10px;
+            margin: 5px 5px 5px 0;
+            border-radius: 4px;
+            font-size: 0.9em;
+            transition: background-color 0.2s;
+        }
+
+        .skill-category span:hover {
+            background-color: var(--color-green);
+            color: var(--color-black);
+            font-weight: bold;
         }
 
         /* --- Contact Form Section --- */
         #contact {
-            background-color: var(--color-gray);
+            background-color: #222;
             padding: 40px;
             border-radius: 8px;
             margin-top: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         .form-group {
@@ -116,12 +197,19 @@
         .form-group input[type="email"],
         .form-group textarea {
             width: 100%;
-            padding: 10px;
-            border: 1px solid var(--color-silver);
+            padding: 12px;
+            border: 1px solid var(--color-gray);
             border-radius: 4px;
             background-color: var(--color-black);
             color: var(--color-white);
-            box-sizing: border-box; /* Ensures padding doesn't affect total width */
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--color-green);
+            outline: none;
         }
 
         .form-group textarea {
@@ -131,17 +219,19 @@
 
         .submit-btn {
             background-color: var(--color-green);
-            color: var(--color-white);
-            padding: 12px 20px;
+            color: var(--color-black);
+            padding: 12px 25px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             font-size: 1.1em;
-            transition: background-color 0.3s;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.1s;
         }
 
         .submit-btn:hover {
-            background-color: #00a000; /* Lighter green on hover */
+            background-color: #00a000;
+            transform: translateY(-1px);
         }
 
         /* Footer */
@@ -150,9 +240,9 @@
             padding: 20px 0;
             color: var(--color-silver);
             font-size: 0.9em;
-            margin-top: 30px;
+            margin-top: 50px;
+            border-top: 1px solid var(--color-gray);
         }
-
     </style>
     <script>
         // JavaScript function to handle the contact form submission
@@ -178,59 +268,160 @@
             // Open the user's default email client
             window.location.href = mailtoLink;
 
-            // Optional: Clear the form after redirection (for better UX)
-            // Note: Clearing the form might happen before the email client opens, depending on the browser.
-            document.getElementById('contactForm').reset();
-
-            alert("Your email client will open to send the inquiry. Please ensure you send the message from your email program.");
+            // Optional: Provide feedback (using a custom styled notification is better than alert)
+            // Using alert here as per strict instructions, but recommend custom UI.
+            alert("Your email client will open to send the inquiry to inquiries@weemsconsulting.net. Please ensure you send the message from your email program.");
+            
+            // Note: We don't reset the form immediately so the user can copy text if needed.
         }
     </script>
 </head>
 <body>
     <header>
         <div class="logo-container">
-            <img src="<<PASTE_LOGO_IMAGE_URL_HERE>>" alt="Weems Consulting LLC Logo" style="width: 250px; height: auto;">
+            <!-- LOGO INTEGRATION: Updated path to match user's requested filename -->
+            <img src="images/WeemsConsultingLLC_Logo.png" alt="Weems Consulting LLC Logo" class="logo-img">
         </div>
-        <h1>Weems Consulting LLC</h1>
-        <p style="color: var(--color-green);">Full-Service IT Strategy and Implementation</p>
+        <h1>WEEMS CONSULTING LLC</h1>
+        <p style="color: var(--color-silver); font-weight: 500;">IT Strategy, Security, and Operational Excellence</p>
     </header>
 
     <div class="container">
-        <section id="overview">
-            <h2>About Joey Weems</h2>
-            <p style="color: var(--color-silver);">
-                As the principal consultant, I bring a decade of experience in enterprise IT infrastructure, cloud migration, and cybersecurity strategy. Weems Consulting LLC is dedicated to providing tailored, full-service solutions that drive efficiency, security, and growth for your business.
+        <!-- PROFESSIONAL SUMMARY -->
+        <section id="summary">
+            <h2>🎯 Professional Summary</h2>
+            <p>
+                Highly accomplished and results-driven IT Director with over a decade of progressive experience in strategic technology leadership, infrastructure modernization, and enterprise security. Proven track record of <span class="highlight">reducing IT operational spend (>$500K total across roles)</span>, achieving critical compliance certifications (CARF, NIST 800-171, ISO 27001, PCI, HIPAA), and leading large-scale digital transformation initiatives across multi-site and global organizations. Seeking to drive technology strategy, operational excellence, and business value for clients.
             </p>
         </section>
 
+        <!-- EXPERIENCE SECTION -->
         <section id="experience">
-            <h2>Professional Experience</h2>
+            <h2>💼 Experience</h2>
             
+            <!-- GLOM Global -->
             <div class="experience-item">
-                <h3>Senior IT Infrastructure Manager (2018 – Present)</h3>
-                <p class="details">Tech Solutions Corp | Los Angeles, CA</p>
+                <h3>Director of Information Technology</h3>
+                <p class="details">GLOM Global · Livermore, CA · May 2024 – Present</p>
                 <ul>
-                    <li>**[PLACEHOLDER]** Led a team of 10 engineers responsible for 24/7 network operations and cloud architecture for a global user base.</li>
-                    <li>**[PLACEHOLDER]** Designed and executed a company-wide migration to Microsoft Azure, resulting in a 30% reduction in capital expenditures.</li>
-                    <li>**[PLACEHOLDER]** Established and enforced robust cybersecurity protocols, leading to a 99.9% reduction in external threat incidents.</li>
+                    <li><span class="highlight">Strategic IT Leadership & Cost Management:</span> Spearheaded IT strategy and operations across 38 US locations within a $1M operational budget. Partnered with Executive Leadership to develop a comprehensive IT roadmap focused on security, efficiency, and significant cost reduction.</li>
+                    <li><span class="highlight">Compliance & Risk Mitigation:</span> Played a key role in achieving CARF Accreditation, ensuring all IT processes met stringent compliance standards, including securing sensitive PHI (Protected Health Information).</li>
+                    <li><span class="highlight">Service & Efficiency Transformation:</span> Directed the implementation of an ITSM platform, <span class="highlight">reducing average ticket resolution times from over 7 days to under 1 day</span>, dramatically improving SLAs and boosting user satisfaction.</li>
+                    <li><span class="highlight">Digital Automation:</span> Drove compliance and efficiency by custom-building Microsoft Power Platform (PowerApps/Power BI) solutions for Internal Auditing (HIPAA, Safety), HR, and Clinical Management.</li>
                 </ul>
             </div>
 
+            <!-- Green Circuits -->
             <div class="experience-item">
-                <h3>Cloud Migration Specialist (2014 – 2018)</h3>
-                <p class="details">Innovate Systems LLC | San Diego, CA</p>
+                <h3>Director, IT</h3>
+                <p class="details">Green Circuits · San Jose, CA · Apr 2022 – Present (Concurrent Engagement)</p>
                 <ul>
-                    <li>**[PLACEHOLDER]** Provided hands-on consultation and deployment services for small to medium businesses adopting AWS services.</li>
-                    <li>**[PLACEHOLDER]** Developed custom disaster recovery and business continuity plans for high-stakes financial clients.</li>
+                    <li><span class="highlight">Fiscal Responsibility:</span> Drove significant fiscal responsibility by <span class="highlight">reducing annual IT operational spend by over $100,000</span> through strategic negotiation and optimization of managed services agreements.</li>
+                    <li><span class="highlight">Cybersecurity & Compliance:</span> Achieved robust <span class="highlight">NIST 800-171 (CMMC readiness) compliance</span>, which unlocked critical new revenue streams in military and defense contracts while elevating the organizational cybersecurity posture.</li>
+                    <li><span class="highlight">Infrastructure Modernization:</span> Executed a strategic migration of end-of-life servers and storage to Microsoft Azure, enhancing system reliability and minimizing total cost of ownership (TCO).</li>
+                    <li><span class="highlight">Risk Mitigation:</span> Strengthened network defense via the adoption of Zero-Trust principles and directed a comprehensive security and awareness program that reduced phishing susceptibility from 62% to a mere 9%.</li>
+                </ul>
+            </div>
+
+            <!-- Overland-Tandberg -->
+            <div class="experience-item">
+                <h3>Director, Global IT</h3>
+                <p class="details">Overland-Tandberg · San Ramon, CA · Jan 2022 – Mar 2022</p>
+                <ul>
+                    <li><span class="highlight">Global Efficiency:</span> Cut unnecessary expenditures on O365 licensing by over <span class="highlight">$24,000 per year</span> through the consolidation of disparate tenancies into a unified O365 tenant.</li>
+                    <li><span class="highlight">Operational Excellence:</span> Transitioned from an email-centric support approach to an ITSM system, achieving an average ticket resolution time of less than one day.</li>
+                </ul>
+            </div>
+
+            <!-- STACK INFRASTRUCTURE -->
+            <div class="experience-item">
+                <h3>Director, IT</h3>
+                <p class="details">STACK INFRASTRUCTURE · San Jose, CA · Nov 2015 – Nov 2021</p>
+                <ul>
+                    <li><span class="highlight">Financial & Capital Efficiency:</span> Drove strategic initiatives resulting in a <span class="highlight">$200,000+ reduction in average cost per site</span> for infrastructure deployment. Reduced annual IT operational expenditures by over $100,000 through strategic MSP outsourcing.</li>
+                    <li><span class="highlight">High-Level Compliance:</span> Served as a fundamental stakeholder in achieving rigorous certifications, including <span class="highlight">ISO 27001, PCI, HIPAA, and SSAE 16</span>.</li>
+                    <li><span class="highlight">Digital Automation & Sales Enablement:</span> Achieved over 100% efficiency gain for the Sales team by optimizing Salesforce and implementing quote-to-cash best practices, saving users 8 hours per week. Streamlined legal and contract management, reducing turnaround time from 8 days to less than 3 days via automation.</li>
+                </ul>
+            </div>
+
+            <!-- Spartronics -->
+            <div class="experience-item">
+                <h3>Senior Manager, IT and Facilities</h3>
+                <p class="details">Spartronics · Milpitas, CA · Mar 2014 – Nov 2015</p>
+                <ul>
+                    <li><span class="highlight">M&A Integration:</span> Executed IT integration for two acquired companies, standardizing site activities, centralizing support, and realizing substantial savings through the elimination of excess IT spend.</li>
+                    <li><span class="highlight">Infrastructure Modernization:</span> Drove modernization by transitioning from physical servers to a private cloud environment, successfully <span class="highlight">reducing the physical IT footprint by over 90%</span> and boosting scalability.</li>
+                </ul>
+            </div>
+            
+             <!-- Additional Experience (Condensed) -->
+            <div class="experience-item" style="border-left: 4px solid var(--color-silver);">
+                <h3>Additional Experience & Recognition</h3>
+                <p class="details">Blackhawk Network (Systems Analyst, Global Fulfillment Analyst, Desktop Support Technician) | US Navy (Aviation Machinist 2nd Class)</p>
+                <ul>
+                    <li><span class="highlight">US Navy Service:</span> Aviation Machinist 2nd Class (Aug 2003 - Feb 2009). Qualified CDI and CDQAR. Received (2) Navy and Marine Corps Achievement Medals. Honorably discharged.</li>
+                    <li><span class="highlight">Early Career IT Roles:</span> Provided foundational support and analysis across systems and global fulfillment during tenure at Blackhawk Network (2012–2014).</li>
                 </ul>
             </div>
         </section>
 
+        <!-- SKILLS SECTION -->
+        <section id="skills">
+            <h2>🛠️ Core Competencies & Technical Skills</h2>
+            <div class="skills-grid">
+                
+                <div class="skill-category">
+                    <h4>IT Strategy & Leadership</h4>
+                    <span>Strategic Vision</span>
+                    <span>Digital Transformation</span>
+                    <span>Enterprise Architecture</span>
+                    <span>Vendor Management</span>
+                    <span>IT Strategy</span>
+                    <span>Project Management</span>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Cybersecurity & Compliance</h4>
+                    <span>NIST 800-171 (CMMC)</span>
+                    <span>ISO 27001</span>
+                    <span>HIPAA</span>
+                    <span>PCI & SSAE 16</span>
+                    <span>CARF</span>
+                    <span>Zero-Trust Principles</span>
+                    <span>EDR / MFA</span>
+                </div>
+
+                <div class="skill-category">
+                    <h4>Cloud & Platforms</h4>
+                    <span>Microsoft Azure</span>
+                    <span>Power Platform (PowerApps/BI)</span>
+                    <span>Microsoft Endpoint Manager</span>
+                    <span>Salesforce</span>
+                    <span>NetSuite (ERP)</span>
+                    <span>ServiceNow Admin</span>
+                    <span>Fortinet</span>
+                </div>
+                
+                <div class="skill-category">
+                    <h4>Service & Operations</h4>
+                    <span>ITSM Implementation</span>
+                    <span>Service-Level Agreements (SLA)</span>
+                    <span>IT Operations</span>
+                    <span>CMDB</span>
+                    <span>KPIs</span>
+                    <span>Telecommunications</span>
+                    <span>Network Admin</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT FORM SECTION -->
         <section id="contact">
             <h2>Contact for Consulting Services</h2>
             <form id="contactForm" onsubmit="submitContactForm(event)">
                 <p style="color: var(--color-silver); font-size: 0.9em;">
-                    Note: Clicking 'Send Inquiry' will open a new message in your computer's default email program, pre-filled with the information below.
+                    To initiate a discussion about your IT strategy or security needs, please fill out the form below. Clicking 'Send Inquiry' will open a new message in your email client addressed to <span class="highlight">inquiries@weemsconsulting.net</span>.
                 </p>
                 <div class="form-group">
                     <label for="name">Your Name</label>
@@ -254,7 +445,7 @@
     </div>
 
     <footer>
-        &copy; <span id="year"></span> Weems Consulting LLC. All rights reserved. | <a href="#" style="color: var(--color-green); text-decoration: none;">Privacy Policy</a>
+        &copy; <span id="year"></span> Weems Consulting LLC. All rights reserved.
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
