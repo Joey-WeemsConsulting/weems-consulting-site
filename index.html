@@ -117,15 +117,26 @@
         }
         
         /* --- Home/Summary Styles --- */
-        #home p {
+        .main-content-image {
+            width: 100%;
+            max-width: 800px; /* Limits size on large screens */
+            height: auto;
+            display: block;
+            margin: 30px auto; /* Center the image and add vertical spacing */
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
+            border: 1px solid var(--color-gray);
+        }
+
+        #home .intro-box {
             background-color: var(--color-dark-gray);
-            padding: 20px;
+            padding: 25px;
             border-left: 5px solid var(--color-green);
             border-radius: 6px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             font-size: 1.1em;
             color: var(--color-silver);
-            margin-bottom: 25px; /* Added spacing */
+            margin-bottom: 25px;
         }
         
         /* New section for home page */
@@ -448,11 +459,20 @@
         <!-- 1. HOME PAGE (Professional Summary) -->
         <!-- ============================================== -->
         <section id="home" class="page-section">
-            <h2>IT Strategy, Security, and Operational Excellence</h2>
-            <p>
-                Highly accomplished and results-driven IT Director with over a decade of progressive experience in strategic technology leadership, infrastructure modernization, and enterprise security. Proven track record of <span class="highlight">reducing IT operational spend (>$500K total across roles)</span>, achieving critical compliance certifications (CARF, NIST 800-171, ISO 27001, PCI, HIPAA), and leading large-scale digital transformation initiatives across multi-site and global organizations. Weems Consulting LLC is dedicated to transforming your IT challenges into competitive advantages.
-            </p>
-
+            <h2>Strategic Guidance for Your IT Future 🚀</h2>
+            
+            <div class="intro-box">
+                <p>
+                    Weems Consulting LLC is built on a foundation of proven, director-level leadership and measurable results. We understand that IT challenges rarely fit neatly into a box, and neither should our solutions.
+                </p>
+                <p>
+                    We are here to help your organization, regardless of scale: from a **single, targeted conversation** focused on identifying gaps and ensuring your current IT team is operating optimally, to providing **comprehensive, monthly strategic support** with actionable deliverables that align directly with your core business mission and drive measurable financial returns.
+                </p>
+            </div>
+            
+            <!-- IMAGE INTEGRATION -->
+            <img src="images/consulting_2.jpg" alt="A team discussing strategy around a whiteboard" class="main-content-image">
+            
             <div class="challenge-box">
                 <h3 style="color: var(--color-green);">The Alignment Challenge in Modern IT</h3>
                 <p>Today's IT departments are often caught between rapid digital demands and tight compliance and budgetary constraints. This misalignment frequently results in:</p>
@@ -472,28 +492,28 @@
         <!-- 2. SERVICES PAGE -->
         <!-- ============================================== -->
         <section id="services" class="page-section">
-            <h2>Our Core Consulting Services</h2>
+            <h2>Our Core Consulting Services 💡</h2>
             <p style="color: var(--color-silver);">We offer full-spectrum IT consulting, providing strategic vision and hands-on execution across the entire enterprise technology stack.</p>
             
             <div class="service-card-grid">
                 
                 <div class="service-card">
-                    <h4>IT Strategy & Leadership</h4>
+                    <h4>📊 IT Strategy & Leadership</h4>
                     <p>Develop clear, forward-looking IT roadmaps aligned with business objectives. Services include technology planning, enterprise architecture design, CAPEX/OPEX cost optimization, and vendor management strategies.</p>
                 </div>
 
                 <div class="service-card">
-                    <h4>Cybersecurity & Compliance</h4>
+                    <h4>🛡️ Cybersecurity & Compliance</h4>
                     <p>Achieve and maintain critical security postures and compliance standards (NIST, ISO 27001, HIPAA, PCI). Implement Zero-Trust models, EDR solutions, and comprehensive security awareness programs to mitigate organizational risk.</p>
                 </div>
 
                 <div class="service-card">
-                    <h4>Cloud & Infrastructure Modernization</h4>
+                    <h4>☁️ Cloud & Infrastructure Modernization</h4>
                     <p>Expert guidance and execution for seamless cloud migrations (Azure, AWS). Modernize legacy infrastructure, optimize cloud spend, and implement highly available and scalable systems for business continuity.</p>
                 </div>
                 
                 <div class="service-card">
-                    <h4>Operational Excellence (ITSM)</h4>
+                    <h4>⚙️ Operational Excellence (ITSM)</h4>
                     <p>Transform IT service delivery using ITSM platforms (ServiceNow, custom solutions) to dramatically improve SLAs and user satisfaction. Implement CMDB, optimize support processes, and drive digital automation (Power Platform, Salesforce).</p>
                 </div>
 
@@ -509,6 +529,11 @@
         <section id="experience" class="page-section">
             <h2>💼 Detailed Professional Experience</h2>
             
+            <!-- Moved Summary to top of Experience page -->
+            <p class="intro-box" style="border-left: 5px solid var(--color-silver); font-weight: bold;">
+                <span style="color: var(--color-green);">Professional Summary:</span> Highly accomplished and results-driven IT Director with over a decade of progressive experience in strategic technology leadership, infrastructure modernization, and enterprise security. Proven track record of <span class="highlight">reducing IT operational spend (>$500K total across roles)</span>, achieving critical compliance certifications (CARF, NIST 800-171, ISO 27001, PCI, HIPAA), and leading large-scale digital transformation initiatives across multi-site and global organizations.
+            </p>
+
             <!-- GLOM Global -->
             <div class="experience-item">
                 <h3>Director of Information Technology</h3>
