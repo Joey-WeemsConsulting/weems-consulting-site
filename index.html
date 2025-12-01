@@ -125,8 +125,39 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             font-size: 1.1em;
             color: var(--color-silver);
+            margin-bottom: 25px; /* Added spacing */
         }
         
+        /* New section for home page */
+        .challenge-box {
+            background-color: #2a2a2a;
+            padding: 25px;
+            border: 1px solid var(--color-gray);
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        .challenge-box h3 {
+            color: var(--color-silver);
+            margin-bottom: 15px;
+        }
+        .challenge-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .challenge-box ul li {
+            position: relative;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            color: var(--color-silver);
+        }
+        .challenge-box ul li::before {
+            content: "→";
+            color: var(--color-green);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
         /* --- Services Styles --- */
         .service-card-grid {
             display: grid;
@@ -421,6 +452,17 @@
             <p>
                 Highly accomplished and results-driven IT Director with over a decade of progressive experience in strategic technology leadership, infrastructure modernization, and enterprise security. Proven track record of <span class="highlight">reducing IT operational spend (>$500K total across roles)</span>, achieving critical compliance certifications (CARF, NIST 800-171, ISO 27001, PCI, HIPAA), and leading large-scale digital transformation initiatives across multi-site and global organizations. Weems Consulting LLC is dedicated to transforming your IT challenges into competitive advantages.
             </p>
+
+            <div class="challenge-box">
+                <h3 style="color: var(--color-green);">The Alignment Challenge in Modern IT</h3>
+                <p>Today's IT departments are often caught between rapid digital demands and tight compliance and budgetary constraints. This misalignment frequently results in:</p>
+                <ul>
+                    <li>**Reactive Spending:** Budgetary resources are consumed by firefighting and legacy maintenance, preventing proactive investment in growth.</li>
+                    <li>**Compliance Gaps:** Security frameworks (NIST, ISO) are implemented unevenly, exposing the organization to unnecessary risk and costly penalties.</li>
+                    <li>**Operational Friction:** Lack of ITSM structure leads to slow ticket resolution, poor user satisfaction, and reduced overall business productivity.</li>
+                </ul>
+                <p>Weems Consulting addresses these core issues by providing <span class="highlight">strategic leadership</span> and <span class="highlight">actionable roadmaps</span>. We translate complex technical needs into measurable business value, ensuring that every IT initiative is grounded in operational excellence and clear financial returns, putting your organization on a proper, strategic path.</p>
+            </div>
             <div style="text-align: center; margin-top: 40px;">
                 <a href="#contact" class="submit-btn" style="text-decoration: none; display: inline-block;">Start Your Consultation Today</a>
             </div>
